@@ -1,16 +1,28 @@
-### Hi there 👋
+```Python
+print('My name is Tuleninov Roman. I live in Moscow, Russia.') 
+```
+```c#
+Console.WriteLine("I write enterprise software, plugins for Autodesk software and Windows clients applications.");
+```
+```JavaScript
+console.log('Sometimes I do front-end development.'); // I like using VanillaJS without frameworks and libraries
+```
 
-<!--
-**xPRYANIKx/xPRYANIKx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```COBOL
+IDENTIFICATION DIVISION.
+PROGRAM-ID. JOKE.
+PROCEDURE DIVISION.
+    DISPLAY 'As you can see, Im also trying to learn new technologies'.
+    STOP RUN.
+```
+---
+<p align="right">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=cs,py,dotnet,autocad,godot" />
+  </a>
+</p>
+<p align="right">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,html,css,sass,less,md" />
+  </a>
+</p>

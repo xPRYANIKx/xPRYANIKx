@@ -18,11 +18,11 @@ PROCEDURE DIVISION.
 ---
 <p align="right">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=cs,py,dotnet,autocad,godot" />
+    <img src="https://skillicons.dev/icons?i=cs,py,dotnet,autocad,unity,godot,git" />
   </a>
 </p>
 <p align="right">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=js,html,css,sass,less,md" />
+    <img src="https://skillicons.dev/icons?i=js,nodejs,selenium,html,css,sass,less,md" />
   </a>
 </p>

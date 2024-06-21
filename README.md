@@ -18,7 +18,7 @@ PROCEDURE DIVISION.
 ---
 <p align="right">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=cs,py,dotnet,autocad,unity,godot,git" />
+    <img src="https://skillicons.dev/icons?i=cs,kotlin,py,dotnet,autocad,unity,godot,git" />
   </a>
 </p>
 <p align="right">

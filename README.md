@@ -5,7 +5,7 @@ print('My name is Tuleninov Roman. I live in Moscow, Russia.')
 Console.WriteLine("I write enterprise software, plugins for Autodesk software and Windows clients applications.");
 ```
 ```JavaScript
-console.log('Sometimes I do front-end development.'); // I like using VanillaJS without frameworks and libraries
+console.log('I also sometimes create web app...'); // Although not so often
 ```
 
 ```COBOL

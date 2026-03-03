@@ -1,11 +1,5 @@
-```Python
-print('My name is Tuleninov Roman. I live in Moscow, Russia.') 
-```
 ```c#
-Console.WriteLine("I am a Software Engineer.");
-```
-```JavaScript
-console.log('My tech stack is listed below.'); // Yes, yes, those are the square pictures.
+Console.WriteLine("ЦИТАТА ПРО ВОЛКА");
 ```
 
 ---

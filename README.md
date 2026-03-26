@@ -17,7 +17,7 @@ Console.WriteLine("ЦИТАТА ПРО ВОЛКА");
       </td>
       <td align="right">
         <a href="https://skillicons.dev">
-          <img src="https://skillicons.dev/icons?i=cs,dotnet,py,mysql,postgres,redis,mongodb" />
+          <img src="https://skillicons.dev/icons?i=cs,cpp,py,mysql,postgres,redis,mongodb" />
         </a>
         <br />
         <a href="https://skillicons.dev">

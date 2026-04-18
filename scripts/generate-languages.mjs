@@ -97,35 +97,43 @@ async function getLanguages(owner, repo) {
 }
 
 function renderSvg(rows) {
-  const paddingX = 14;
-  const paddingY = 10;
-  const rowHeight = 22;
-
-  const nameX = 28;
-  const barX = 170;
-  const barWidth = 250;
-  const percentX = 435;
-  const bytesX = 505;
-
-  const width = 690;
+  const width = 700;
+  const paddingX = 16;
+  const paddingY = 12;
+  const rowHeight = 24;
   const height = paddingY * 2 + rows.length * rowHeight;
+
   const maxValue = rows[0]?.bytes || 1;
+
+  const innerLeft = paddingX;
+  const innerRight = width - paddingX;
+
+  const dotX = innerLeft + 8;
+  const nameX = innerLeft + 22;
+
+  const bytesRightX = innerRight - 18;
+  const percentRightX = bytesRightX - 92;
+
+  const nameColWidth = 120;
+  const barX = nameX + nameColWidth + 14;
+  const barRight = percentRightX - 18;
+  const barWidth = Math.max(120, barRight - barX);
 
   const rowsSvg = rows
     .map((row, index) => {
-      const y = paddingY + index * rowHeight + 15;
+      const y = paddingY + index * rowHeight + 16;
       const barY = y - 8;
-      const fillWidth = Math.max(3, Math.round((row.bytes / maxValue) * barWidth));
+      const fillWidth = Math.max(4, Math.round((row.bytes / maxValue) * barWidth));
 
       return `
-  <circle cx="${paddingX + 6}" cy="${y - 3}" r="3.5" fill="${row.color}" />
+  <circle cx="${dotX}" cy="${y - 3}" r="4" fill="${row.color}" />
   <text x="${nameX}" y="${y}" class="lang">${escapeXml(row.name)}</text>
 
-  <rect x="${barX}" y="${barY}" width="${barWidth}" height="7" rx="3.5" fill="#2b3250" />
-  <rect x="${barX}" y="${barY}" width="${fillWidth}" height="7" rx="3.5" fill="${row.color}" />
+  <rect x="${barX}" y="${barY}" width="${barWidth}" height="8" rx="4" fill="#2b3250" />
+  <rect x="${barX}" y="${barY}" width="${fillWidth}" height="8" rx="4" fill="${row.color}" />
 
-  <text x="${percentX}" y="${y}" class="percent">${row.percent.toFixed(1)}%</text>
-  <text x="${bytesX}" y="${y}" class="bytes">${escapeXml(formatBytes(row.bytes))}</text>
+  <text x="${percentRightX}" y="${y}" class="percent">${row.percent.toFixed(1)}%</text>
+  <text x="${bytesRightX}" y="${y}" class="bytes">${escapeXml(formatBytes(row.bytes))}</text>
 `;
     })
     .join("");
@@ -133,12 +141,12 @@ function renderSvg(rows) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Languages">
   <style>
-    .lang { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e5e9f0; }
-    .percent { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7aa2f7; }
-    .bytes { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9aa5ce; }
+    .lang { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e5e9f0; }
+    .percent { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7aa2f7; text-anchor: end; }
+    .bytes { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9aa5ce; text-anchor: end; }
   </style>
 
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="14" fill="#1a1b27" stroke="#2f334d"/>
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="16" fill="#1a1b27" stroke="#2f334d"/>
   ${rowsSvg}
 </svg>`;
 }

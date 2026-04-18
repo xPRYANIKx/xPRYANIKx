@@ -8,10 +8,7 @@ Console.WriteLine("ЦИТАТА ПРО ВОЛКА");
   <table>
     <tr>
       <td>
-        <img src="./assets/languages.svg" width="400" alt="0_o" />
-      </td>
-      <td>
-        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo4eDFjMG5uMHpiMnVjMjhvY2Q3NW93MG83ZGJsMXh3ZDJmeWY1OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KGhpQ5NMoWKQurlHwI/giphy.gif" width="150" />
+        <img src="./assets/languages.svg" width="700" alt="0_o" />
       </td>
       <td align="right">
         <a href="https://skillicons.dev">

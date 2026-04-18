@@ -19,7 +19,7 @@ if (!USERNAME) {
 const headers = {
   Accept: "application/vnd.github+json",
   "User-Agent": "github-profile-languages-card",
-  "X-GitHub-Api-Version": "2026-03-10",
+  "X-GitHub-Api-Version": "2022-11-28",
 };
 
 if (GH_TOKEN) {
@@ -28,10 +28,12 @@ if (GH_TOKEN) {
 
 async function gh(url) {
   const res = await fetch(url, { headers });
+
   if (!res.ok) {
     const text = await res.text();
     throw new Error(`GitHub API error ${res.status} for ${url}\n${text}`);
   }
+
   return res.json();
 }
 
@@ -53,9 +55,11 @@ function formatBytes(bytes) {
 
 function colorFromName(name) {
   let hash = 0;
+
   for (let i = 0; i < name.length; i++) {
     hash = ((hash << 5) - hash + name.charCodeAt(i)) | 0;
   }
+
   const hue = Math.abs(hash) % 360;
   return `hsl(${hue} 70% 60%)`;
 }
@@ -92,53 +96,49 @@ async function getLanguages(owner, repo) {
   return gh(url);
 }
 
-function renderSvg(rows, repoCount) {
-  const width = 760;
-  const padding = 24;
-  const headerHeight = 94;
-  const rowHeight = 28;
-  const footerHeight = 22;
-  const height = headerHeight + rows.length * rowHeight + footerHeight;
-  const maxValue = rows[0]?.bytes || 1;
+function renderSvg(rows) {
+  const paddingX = 14;
+  const paddingY = 10;
+  const rowHeight = 22;
 
-  const generatedAt = new Date().toISOString().slice(0, 19).replace("T", " ");
+  const nameX = 28;
+  const barX = 170;
+  const barWidth = 250;
+  const percentX = 435;
+  const bytesX = 505;
+
+  const width = 690;
+  const height = paddingY * 2 + rows.length * rowHeight;
+  const maxValue = rows[0]?.bytes || 1;
 
   const rowsSvg = rows
     .map((row, index) => {
-      const y = headerHeight + index * rowHeight;
-      const barX = 250;
-      const barY = y - 12;
-      const barWidth = 220;
-      const fillWidth = Math.max(6, Math.round((row.bytes / maxValue) * barWidth));
+      const y = paddingY + index * rowHeight + 15;
+      const barY = y - 8;
+      const fillWidth = Math.max(3, Math.round((row.bytes / maxValue) * barWidth));
 
       return `
-  <circle cx="32" cy="${y - 4}" r="5" fill="${row.color}" />
-  <text x="46" y="${y}" class="lang">${escapeXml(row.name)}</text>
+  <circle cx="${paddingX + 6}" cy="${y - 3}" r="3.5" fill="${row.color}" />
+  <text x="${nameX}" y="${y}" class="lang">${escapeXml(row.name)}</text>
 
-  <rect x="${barX}" y="${barY}" width="${barWidth}" height="10" rx="5" fill="#2b3250" />
-  <rect x="${barX}" y="${barY}" width="${fillWidth}" height="10" rx="5" fill="${row.color}" />
+  <rect x="${barX}" y="${barY}" width="${barWidth}" height="7" rx="3.5" fill="#2b3250" />
+  <rect x="${barX}" y="${barY}" width="${fillWidth}" height="7" rx="3.5" fill="${row.color}" />
 
-  <text x="490" y="${y}" class="percent">${row.percent.toFixed(1)}%</text>
-  <text x="565" y="${y}" class="bytes">${escapeXml(formatBytes(row.bytes))}</text>
+  <text x="${percentX}" y="${y}" class="percent">${row.percent.toFixed(1)}%</text>
+  <text x="${bytesX}" y="${y}" class="bytes">${escapeXml(formatBytes(row.bytes))}</text>
 `;
     })
     .join("");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="All languages across repositories">
+<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Languages">
   <style>
-    .title { font: 700 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c0caf5; }
-    .sub { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b9bb4; }
-    .lang { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e5e9f0; }
-    .percent { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7aa2f7; }
-    .bytes { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9aa5ce; }
+    .lang { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e5e9f0; }
+    .percent { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7aa2f7; }
+    .bytes { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9aa5ce; }
   </style>
 
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="18" fill="#1a1b27" stroke="#2f334d"/>
-  <text x="${padding}" y="36" class="title">All languages</text>
-  <text x="${padding}" y="58" class="sub">Public repositories scanned: ${repoCount}</text>
-  <text x="${padding}" y="76" class="sub">Source: GitHub /languages endpoint · Generated: ${generatedAt} UTC</text>
-
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="14" fill="#1a1b27" stroke="#2f334d"/>
   ${rowsSvg}
 </svg>`;
 }
@@ -193,7 +193,7 @@ async function main() {
     )
   );
 
-  fs.writeFileSync(path.join(outDir, "languages.svg"), renderSvg(rows, repos.length));
+  fs.writeFileSync(path.join(outDir, "languages.svg"), renderSvg(rows));
 }
 
 main().catch((error) => {

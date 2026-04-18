@@ -7,9 +7,9 @@ Console.WriteLine("ЦИТАТА ПРО ВОЛКА");
 <div align="center">
   <table>
     <tr>
-<td>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=xPRYANIKx&theme=tokyonight" height="150" />
-</td>
+      <td>
+        <img src="./assets/languages.svg" width="430" alt="0_o" />
+      </td>
       <td>
         <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo4eDFjMG5uMHpiMnVjMjhvY2Q3NW93MG83ZGJsMXh3ZDJmeWY1OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KGhpQ5NMoWKQurlHwI/giphy.gif" width="150" />
       </td>

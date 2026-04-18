@@ -1,0 +1,43 @@
+name: Update languages card
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-languages-card
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate languages.svg
+        env:
+          USERNAME: xPRYANIKx
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INCLUDE_FORKS: "false"
+          EXCLUDE_REPOS: "xPRYANIKx"
+          MIN_PERCENT: "0"
+        run: node scripts/generate-languages.mjs
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/languages.svg assets/languages.json
+          git diff --staged --quiet || git commit -m "Update languages card"
+          git push

@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="690" height="174" viewBox="0 0 690 174" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Languages">
+<svg width="700" height="192" viewBox="0 0 700 192" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Languages">
   <style>
-    .lang { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e5e9f0; }
-    .percent { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7aa2f7; }
-    .bytes { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9aa5ce; }
+    .lang { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e5e9f0; }
+    .percent { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7aa2f7; text-anchor: end; }
+    .bytes { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9aa5ce; text-anchor: end; }
   </style>
 
-  <rect x="0.5" y="0.5" width="689" height="173" rx="14" fill="#1a1b27" stroke="#2f334d"/>
+  <rect x="0.5" y="0.5" width="699" height="191" rx="16" fill="#1a1b27" stroke="#2f334d"/>
   
-  <circle cx="20" cy="22" r="3.5" fill="hsl(243 70% 60%)" />
-  <text x="28" y="25" class="lang">C++</text>
+  <circle cx="24" cy="25" r="4" fill="hsl(243 70% 60%)" />
+  <text x="38" y="28" class="lang">C++</text>
 
-  <rect x="170" y="17" width="250" height="7" rx="3.5" fill="#2b3250" />
-  <rect x="170" y="17" width="250" height="7" rx="3.5" fill="hsl(243 70% 60%)" />
+  <rect x="172" y="20" width="384" height="8" rx="4" fill="#2b3250" />
+  <rect x="172" y="20" width="384" height="8" rx="4" fill="hsl(243 70% 60%)" />
 
-  <text x="435" y="25" class="percent">40.4%</text>
-  <text x="505" y="25" class="bytes">316.3 KB</text>
+  <text x="574" y="28" class="percent">40.4%</text>
+  <text x="666" y="28" class="bytes">316.3 KB</text>
 
-  <circle cx="20" cy="44" r="3.5" fill="hsl(312 70% 60%)" />
-  <text x="28" y="47" class="lang">C#</text>
+  <circle cx="24" cy="49" r="4" fill="hsl(312 70% 60%)" />
+  <text x="38" y="52" class="lang">C#</text>
 
-  <rect x="170" y="39" width="250" height="7" rx="3.5" fill="#2b3250" />
-  <rect x="170" y="39" width="203" height="7" rx="3.5" fill="hsl(312 70% 60%)" />
+  <rect x="172" y="44" width="384" height="8" rx="4" fill="#2b3250" />
+  <rect x="172" y="44" width="312" height="8" rx="4" fill="hsl(312 70% 60%)" />
 
-  <text x="435" y="47" class="percent">32.8%</text>
-  <text x="505" y="47" class="bytes">256.7 KB</text>
+  <text x="574" y="52" class="percent">32.8%</text>
+  <text x="666" y="52" class="bytes">256.7 KB</text>
 
-  <circle cx="20" cy="66" r="3.5" fill="hsl(67 70% 60%)" />
-  <text x="28" y="69" class="lang">C</text>
+  <circle cx="24" cy="73" r="4" fill="hsl(67 70% 60%)" />
+  <text x="38" y="76" class="lang">C</text>
 
-  <rect x="170" y="61" width="250" height="7" rx="3.5" fill="#2b3250" />
-  <rect x="170" y="61" width="151" height="7" rx="3.5" fill="hsl(67 70% 60%)" />
+  <rect x="172" y="68" width="384" height="8" rx="4" fill="#2b3250" />
+  <rect x="172" y="68" width="232" height="8" rx="4" fill="hsl(67 70% 60%)" />
 
-  <text x="435" y="69" class="percent">24.4%</text>
-  <text x="505" y="69" class="bytes">191.1 KB</text>
+  <text x="574" y="76" class="percent">24.4%</text>
+  <text x="666" y="76" class="bytes">191.1 KB</text>
 
-  <circle cx="20" cy="88" r="3.5" fill="hsl(314 70% 60%)" />
-  <text x="28" y="91" class="lang">Makefile</text>
+  <circle cx="24" cy="97" r="4" fill="hsl(314 70% 60%)" />
+  <text x="38" y="100" class="lang">Makefile</text>
 
-  <rect x="170" y="83" width="250" height="7" rx="3.5" fill="#2b3250" />
-  <rect x="170" y="83" width="9" height="7" rx="3.5" fill="hsl(314 70% 60%)" />
+  <rect x="172" y="92" width="384" height="8" rx="4" fill="#2b3250" />
+  <rect x="172" y="92" width="13" height="8" rx="4" fill="hsl(314 70% 60%)" />
 
-  <text x="435" y="91" class="percent">1.4%</text>
-  <text x="505" y="91" class="bytes">11.0 KB</text>
+  <text x="574" y="100" class="percent">1.4%</text>
+  <text x="666" y="100" class="bytes">11.0 KB</text>
 
-  <circle cx="20" cy="110" r="3.5" fill="hsl(83 70% 60%)" />
-  <text x="28" y="113" class="lang">CSS</text>
+  <circle cx="24" cy="121" r="4" fill="hsl(83 70% 60%)" />
+  <text x="38" y="124" class="lang">CSS</text>
 
-  <rect x="170" y="105" width="250" height="7" rx="3.5" fill="#2b3250" />
-  <rect x="170" y="105" width="3" height="7" rx="3.5" fill="hsl(83 70% 60%)" />
+  <rect x="172" y="116" width="384" height="8" rx="4" fill="#2b3250" />
+  <rect x="172" y="116" width="5" height="8" rx="4" fill="hsl(83 70% 60%)" />
 
-  <text x="435" y="113" class="percent">0.5%</text>
-  <text x="505" y="113" class="bytes">4.0 KB</text>
+  <text x="574" y="124" class="percent">0.5%</text>
+  <text x="666" y="124" class="bytes">4.0 KB</text>
 
-  <circle cx="20" cy="132" r="3.5" fill="hsl(256 70% 60%)" />
-  <text x="28" y="135" class="lang">SCSS</text>
+  <circle cx="24" cy="145" r="4" fill="hsl(256 70% 60%)" />
+  <text x="38" y="148" class="lang">SCSS</text>
 
-  <rect x="170" y="127" width="250" height="7" rx="3.5" fill="#2b3250" />
-  <rect x="170" y="127" width="3" height="7" rx="3.5" fill="hsl(256 70% 60%)" />
+  <rect x="172" y="140" width="384" height="8" rx="4" fill="#2b3250" />
+  <rect x="172" y="140" width="4" height="8" rx="4" fill="hsl(256 70% 60%)" />
 
-  <text x="435" y="135" class="percent">0.4%</text>
-  <text x="505" y="135" class="bytes">3.2 KB</text>
+  <text x="574" y="148" class="percent">0.4%</text>
+  <text x="666" y="148" class="bytes">3.2 KB</text>
 
-  <circle cx="20" cy="154" r="3.5" fill="hsl(99 70% 60%)" />
-  <text x="28" y="157" class="lang">HTML</text>
+  <circle cx="24" cy="169" r="4" fill="hsl(99 70% 60%)" />
+  <text x="38" y="172" class="lang">HTML</text>
 
-  <rect x="170" y="149" width="250" height="7" rx="3.5" fill="#2b3250" />
-  <rect x="170" y="149" width="3" height="7" rx="3.5" fill="hsl(99 70% 60%)" />
+  <rect x="172" y="164" width="384" height="8" rx="4" fill="#2b3250" />
+  <rect x="172" y="164" width="4" height="8" rx="4" fill="hsl(99 70% 60%)" />
 
-  <text x="435" y="157" class="percent">0.1%</text>
-  <text x="505" y="157" class="bytes">768 B</text>
+  <text x="574" y="172" class="percent">0.1%</text>
+  <text x="666" y="172" class="bytes">768 B</text>
 
 </svg>

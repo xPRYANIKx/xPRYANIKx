@@ -103,8 +103,6 @@ function renderSvg(rows) {
   const rowHeight = 24;
   const height = paddingY * 2 + rows.length * rowHeight;
 
-  const maxValue = rows[0]?.bytes || 1;
-
   const innerLeft = paddingX;
   const innerRight = width - paddingX;
 
@@ -123,7 +121,10 @@ function renderSvg(rows) {
     .map((row, index) => {
       const y = paddingY + index * rowHeight + 16;
       const barY = y - 8;
-      const fillWidth = Math.max(4, Math.round((row.bytes / maxValue) * barWidth));
+      const fillWidth =
+        row.percent <= 0
+          ? 0
+          : Math.max(4, Math.round((row.percent / 100) * barWidth));
 
       return `
   <circle cx="${dotX}" cy="${y - 3}" r="4" fill="${row.color}" />

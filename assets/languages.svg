@@ -12,7 +12,7 @@
   <text x="38" y="28" class="lang">C++</text>
 
   <rect x="172" y="20" width="384" height="8" rx="4" fill="#2b3250" />
-  <rect x="172" y="20" width="384" height="8" rx="4" fill="hsl(243 70% 60%)" />
+  <rect x="172" y="20" width="155" height="8" rx="4" fill="hsl(243 70% 60%)" />
 
   <text x="574" y="28" class="percent">40.4%</text>
   <text x="666" y="28" class="bytes">316.3 KB</text>
@@ -21,7 +21,7 @@
   <text x="38" y="52" class="lang">C#</text>
 
   <rect x="172" y="44" width="384" height="8" rx="4" fill="#2b3250" />
-  <rect x="172" y="44" width="312" height="8" rx="4" fill="hsl(312 70% 60%)" />
+  <rect x="172" y="44" width="126" height="8" rx="4" fill="hsl(312 70% 60%)" />
 
   <text x="574" y="52" class="percent">32.8%</text>
   <text x="666" y="52" class="bytes">256.7 KB</text>
@@ -30,7 +30,7 @@
   <text x="38" y="76" class="lang">C</text>
 
   <rect x="172" y="68" width="384" height="8" rx="4" fill="#2b3250" />
-  <rect x="172" y="68" width="232" height="8" rx="4" fill="hsl(67 70% 60%)" />
+  <rect x="172" y="68" width="94" height="8" rx="4" fill="hsl(67 70% 60%)" />
 
   <text x="574" y="76" class="percent">24.4%</text>
   <text x="666" y="76" class="bytes">191.1 KB</text>
@@ -39,7 +39,7 @@
   <text x="38" y="100" class="lang">Makefile</text>
 
   <rect x="172" y="92" width="384" height="8" rx="4" fill="#2b3250" />
-  <rect x="172" y="92" width="13" height="8" rx="4" fill="hsl(314 70% 60%)" />
+  <rect x="172" y="92" width="5" height="8" rx="4" fill="hsl(314 70% 60%)" />
 
   <text x="574" y="100" class="percent">1.4%</text>
   <text x="666" y="100" class="bytes">11.0 KB</text>
@@ -48,7 +48,7 @@
   <text x="38" y="124" class="lang">CSS</text>
 
   <rect x="172" y="116" width="384" height="8" rx="4" fill="#2b3250" />
-  <rect x="172" y="116" width="5" height="8" rx="4" fill="hsl(83 70% 60%)" />
+  <rect x="172" y="116" width="4" height="8" rx="4" fill="hsl(83 70% 60%)" />
 
   <text x="574" y="124" class="percent">0.5%</text>
   <text x="666" y="124" class="bytes">4.0 KB</text>

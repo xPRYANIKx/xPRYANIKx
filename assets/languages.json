@@ -1,0 +1,56 @@
+{
+  "username": "xPRYANIKx",
+  "repositories_scanned": [
+    "ExtraHand",
+    "ViewpointRenamePlugin",
+    "LcOpRedlineTextPlugin",
+    "RevitRibbonParametersManager",
+    "default_website"
+  ],
+  "languages": [
+    {
+      "name": "C++",
+      "bytes": 323924,
+      "percent": 40.3959230451705,
+      "color": "hsl(243 70% 60%)"
+    },
+    {
+      "name": "C#",
+      "bytes": 262852,
+      "percent": 32.77975440001097,
+      "color": "hsl(312 70% 60%)"
+    },
+    {
+      "name": "C",
+      "bytes": 195651,
+      "percent": 24.399250255339684,
+      "color": "hsl(67 70% 60%)"
+    },
+    {
+      "name": "Makefile",
+      "bytes": 11258,
+      "percent": 1.4039629716925248,
+      "color": "hsl(314 70% 60%)"
+    },
+    {
+      "name": "CSS",
+      "bytes": 4115,
+      "percent": 0.5131735324671114,
+      "color": "hsl(83 70% 60%)"
+    },
+    {
+      "name": "SCSS",
+      "bytes": 3305,
+      "percent": 0.41216003032899223,
+      "color": "hsl(256 70% 60%)"
+    },
+    {
+      "name": "HTML",
+      "bytes": 768,
+      "percent": 0.09577576499021666,
+      "color": "hsl(99 70% 60%)"
+    }
+  ],
+  "total_bytes": 801873,
+  "generated_at_utc": "2026-04-18T12:58:03.077Z"
+}

@@ -12,16 +12,16 @@
   <text x="38" y="28" class="lang">C++</text>
 
   <rect x="172" y="20" width="384" height="8" rx="4" fill="#2b3250" />
-  <rect x="172" y="20" width="151" height="8" rx="4" fill="hsl(243 70% 60%)" />
+  <rect x="172" y="20" width="152" height="8" rx="4" fill="hsl(243 70% 60%)" />
 
-  <text x="574" y="28" class="percent">39.3%</text>
-  <text x="666" y="28" class="bytes">316.4 KB</text>
+  <text x="574" y="28" class="percent">39.5%</text>
+  <text x="666" y="28" class="bytes">318.0 KB</text>
 
   <circle cx="24" cy="49" r="4" fill="hsl(312 70% 60%)" />
   <text x="38" y="52" class="lang">C#</text>
 
   <rect x="172" y="44" width="384" height="8" rx="4" fill="#2b3250" />
-  <rect x="172" y="44" width="123" height="8" rx="4" fill="hsl(312 70% 60%)" />
+  <rect x="172" y="44" width="122" height="8" rx="4" fill="hsl(312 70% 60%)" />
 
   <text x="574" y="52" class="percent">31.9%</text>
   <text x="666" y="52" class="bytes">256.7 KB</text>
@@ -32,7 +32,7 @@
   <rect x="172" y="68" width="384" height="8" rx="4" fill="#2b3250" />
   <rect x="172" y="68" width="98" height="8" rx="4" fill="hsl(67 70% 60%)" />
 
-  <text x="574" y="76" class="percent">25.5%</text>
+  <text x="574" y="76" class="percent">25.4%</text>
   <text x="666" y="76" class="bytes">205.1 KB</text>
 
   <circle cx="24" cy="97" r="4" fill="hsl(314 70% 60%)" />

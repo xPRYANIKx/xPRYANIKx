@@ -1,9 +1,3 @@
-```csharp
-Console.WriteLine("ЦИТАТА ПРО ВОЛКА");
-```
-
----
-
 <div align="center">
   <table>
     <tr>

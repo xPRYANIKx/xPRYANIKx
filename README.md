@@ -14,15 +14,15 @@
         </a>
         <br />
         <a href="https://skillicons.dev">
-          <img src="https://skillicons.dev/icons?i=mysql,postgres,redis,mongodb,nginx,kafka,rabbitmq" />
+          <img src="https://skillicons.dev/icons?i=mysql,postgres,redis,mongodb,kafka" />
         </a>
         <br />
         <a href="https://skillicons.dev">
-          <img src="https://skillicons.dev/icons?i=js,ts,selenium,html,css,sass,less" />
+          <img src="https://skillicons.dev/icons?i=js,selenium,html,sass,less" />
         </a>
         <br />
         <a href="https://skillicons.dev">
-          <img src="https://skillicons.dev/icons?i=docker,kubernetes,git,github,bash,powershell,autocad" />
+          <img src="https://skillicons.dev/icons?i=docker,kubernetes,git,github,autocad" />
         </a>
       </td>
     </tr>

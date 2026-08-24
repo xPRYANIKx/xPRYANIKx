@@ -4,6 +4,10 @@ import path from "node:path";
 const USERNAME = process.env.USERNAME;
 const GH_TOKEN = process.env.GH_TOKEN || "";
 const INCLUDE_FORKS = String(process.env.INCLUDE_FORKS).toLowerCase() === "true";
+const INCLUDE_ORGS = String(process.env.INCLUDE_ORGS || "")
+  .split(",")
+  .map((x) => x.trim())
+  .filter(Boolean);
 const EXCLUDE_REPOS = new Set(
   String(process.env.EXCLUDE_REPOS || "")
     .split(",")
@@ -64,12 +68,13 @@ function colorFromName(name) {
   return `hsl(${hue} 70% 60%)`;
 }
 
-async function getAllRepos(username) {
+async function getPagedRepos(baseUrl) {
   const repos = [];
   let page = 1;
 
   while (true) {
-    const url = `https://api.github.com/users/${encodeURIComponent(username)}/repos?type=owner&sort=updated&per_page=100&page=${page}`;
+    const separator = baseUrl.includes("?") ? "&" : "?";
+    const url = `${baseUrl}${separator}sort=updated&per_page=100&page=${page}`;
     const batch = await gh(url);
 
     if (!Array.isArray(batch) || batch.length === 0) {
@@ -85,10 +90,38 @@ async function getAllRepos(username) {
     page++;
   }
 
-  return repos
+  return repos;
+}
+
+async function getAllRepos(username) {
+  const uniqueRepos = new Map();
+
+  const personalRepos = await getPagedRepos(
+    `https://api.github.com/users/${encodeURIComponent(username)}/repos?type=owner`
+  );
+
+  for (const repo of personalRepos) {
+    uniqueRepos.set(repo.full_name.toLowerCase(), repo);
+  }
+
+  for (const org of INCLUDE_ORGS) {
+    const organizationRepos = await getPagedRepos(
+      `https://api.github.com/orgs/${encodeURIComponent(org)}/repos?type=all`
+    );
+
+    for (const repo of organizationRepos) {
+      uniqueRepos.set(repo.full_name.toLowerCase(), repo);
+    }
+  }
+
+  return [...uniqueRepos.values()]
     .filter((repo) => INCLUDE_FORKS || !repo.fork)
     .filter((repo) => !repo.archived)
-    .filter((repo) => !EXCLUDE_REPOS.has(repo.name));
+    .filter(
+      (repo) =>
+        !EXCLUDE_REPOS.has(repo.name) &&
+        !EXCLUDE_REPOS.has(repo.full_name)
+    );
 }
 
 async function getLanguages(owner, repo) {
@@ -192,7 +225,9 @@ async function main() {
     JSON.stringify(
       {
         username: USERNAME,
-        repositories_scanned: repos.map((r) => r.name),
+        repositories_scanned: repos.map((r) => r.full_name),
+        organizations_scanned: INCLUDE_ORGS,
+        include_forks: INCLUDE_FORKS,
         languages: rows,
         total_bytes: totalBytes,
         generated_at_utc: new Date().toISOString(),

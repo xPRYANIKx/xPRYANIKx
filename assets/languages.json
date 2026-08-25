@@ -1,13 +1,15 @@
 {
   "username": "xPRYANIKx",
   "repositories_scanned": [
-    "xPRYANIKx/xPRYANIKx",
-    "xPRYANIKx/ExtraHand",
     "xPRYANIKx/LcOpRedlineTextPlugin",
-    "xPRYANIKx/RevitRibbonParametersManager",
     "xPRYANIKx/ViewpointRenamePlugin",
-    "xPRYANIKx/hvc-uinput-bridge",
+    "xPRYANIKx/RevitRibbonParametersManager",
     "xPRYANIKx/default_website",
+    "xPRYANIKx/hvc-uinput-bridge",
+    "xPRYANIKx/ExtraHand",
+    "xPRYANIKx/xPRYANIKx",
+    "RetroArchNX/RetroArchNX-Snes9x",
+    "RetroArchNX/.github",
     "RetroArchNX/RetroArchNX-FCEUmm"
   ],
   "organizations_scanned": [
@@ -17,83 +19,83 @@
   "languages": [
     {
       "name": "C",
-      "bytes": 5107637,
-      "percent": 87.78495831550897,
+      "bytes": 8128967,
+      "percent": 83.91999972745762,
       "color": "hsl(67 70% 60%)"
     },
     {
       "name": "C++",
-      "bytes": 333125,
-      "percent": 5.725419453037467,
+      "bytes": 1152563,
+      "percent": 11.898570463612135,
       "color": "hsl(243 70% 60%)"
     },
     {
       "name": "C#",
       "bytes": 262852,
-      "percent": 4.517637385575397,
+      "percent": 2.713572311015864,
       "color": "hsl(312 70% 60%)"
     },
     {
       "name": "Python",
       "bytes": 78278,
-      "percent": 1.3453640043373114,
+      "percent": 0.8081087964394403,
       "color": "hsl(244 70% 60%)"
     },
     {
       "name": "Makefile",
-      "bytes": 12275,
-      "percent": 0.21097042787552694,
+      "bytes": 39685,
+      "percent": 0.40969107011803046,
       "color": "hsl(314 70% 60%)"
     },
     {
       "name": "JavaScript",
       "bytes": 6698,
-      "percent": 0.11511852756906553,
+      "percent": 0.06914730471590193,
       "color": "hsl(261 70% 60%)"
     },
     {
       "name": "CSS",
       "bytes": 4115,
-      "percent": 0.07072450596397502,
+      "percent": 0.04248151073543393,
       "color": "hsl(83 70% 60%)"
     },
     {
       "name": "PowerShell",
       "bytes": 3893,
-      "percent": 0.06690899191196956,
+      "percent": 0.04018967710645061,
       "color": "hsl(149 70% 60%)"
     },
     {
       "name": "Shell",
       "bytes": 3398,
-      "percent": 0.05840142679601145,
+      "percent": 0.03507950752831215,
       "color": "hsl(144 70% 60%)"
     },
     {
       "name": "SCSS",
       "bytes": 3305,
-      "percent": 0.05680303577422537,
+      "percent": 0.03411941506211643,
       "color": "hsl(256 70% 60%)"
     },
     {
       "name": "Scheme",
       "bytes": 1968,
-      "percent": 0.033824016461021345,
+      "percent": 0.020316795413689907,
       "color": "hsl(19 70% 60%)"
     },
     {
       "name": "HTML",
       "bytes": 768,
-      "percent": 0.01319961617991077,
+      "percent": 0.007928505527293623,
       "color": "hsl(99 70% 60%)"
     },
     {
       "name": "Perl",
-      "bytes": 39,
-      "percent": 0.0006702930091360938,
+      "bytes": 77,
+      "percent": 0.0007949152677104282,
       "color": "hsl(343 70% 60%)"
     }
   ],
-  "total_bytes": 5818351,
-  "generated_at_utc": "2026-08-24T11:09:19.910Z"
+  "total_bytes": 9686567,
+  "generated_at_utc": "2026-08-25T03:59:31.048Z"
 }

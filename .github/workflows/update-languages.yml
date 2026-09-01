@@ -30,7 +30,7 @@ jobs:
           USERNAME: xPRYANIKx
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           INCLUDE_FORKS: "true"
-          INCLUDE_ORGS: "RetroArchNX"
+          INCLUDE_ORGS: ""
           EXCLUDE_REPOS: ""
           MIN_PERCENT: "0"
         run: node scripts/generate-languages.mjs
